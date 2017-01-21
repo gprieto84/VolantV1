@@ -20,14 +20,12 @@ namespace Volant.Web.Controllers
         }
 
         // GET: Home
-        public ActionResult Index(string customer = null)
+        public ActionResult Index()
         {
             IEnumerable<ProjectViewModel> viewModelProjects;
-            //IEnumerable<Customer> customers;
             IEnumerable<Project> projects;
 
             projects = projectService.GetProjects().ToList();
-            //customers = customerService.GetCustomers(customer).ToList();
 
             viewModelProjects = Mapper.Map<IEnumerable<Project>, IEnumerable<ProjectViewModel>>(projects);
             return View(viewModelProjects);

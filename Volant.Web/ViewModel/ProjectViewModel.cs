@@ -14,6 +14,7 @@ namespace Volant.Web.ViewModel
         public DateTime endDate { get; set; }
         public int progress { get; set; }
         public int customerId { get; set; }
+        public string customerName { get; set; }
         public int projectStatusId { get; set; }
     }
 }
