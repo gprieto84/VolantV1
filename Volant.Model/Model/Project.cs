@@ -24,6 +24,9 @@ namespace Volant.Model
         public int projectStatusId { get; set; }
         public ProjectStatus projectStatus { get; set; }
 
+        //Denormalization
+        public virtual List<Job> Jobs { get; set; }
+
         public Project()
         {
             dateCreated = DateTime.Now;

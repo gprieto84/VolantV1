@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Job.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\ProjectStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

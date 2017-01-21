@@ -17,6 +17,8 @@ namespace Volant.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<ProjectStatus> ProjectStatuses { get; set; }
 
+        public DbSet<Job> Jobs { get; set; }
+
         public virtual void Commit()
         {
             base.SaveChanges();
@@ -27,6 +29,7 @@ namespace Volant.Data
             modelBuilder.Configurations.Add(new ProjectConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
             modelBuilder.Configurations.Add(new ProjectStatusConfiguration());
+            modelBuilder.Configurations.Add(new JobConfiguration());
 
         }
     }
