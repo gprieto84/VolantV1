@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Volant.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,15 @@ namespace Volant.Web
     {
         protected void Application_Start()
         {
+            // Init database
+            System.Data.Entity.Database.SetInitializer(new VolantSeedData());
+
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Autofac and Automapper configurations
+            Bootstrapper.Run();
         }
     }
 }

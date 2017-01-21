@@ -8,7 +8,7 @@ using Volant.Model;
 
 namespace Volant.Data
 {
-    class VolantSeedData : DropCreateDatabaseIfModelChanges<VolantEntities>
+    public class VolantSeedData : DropCreateDatabaseIfModelChanges<VolantEntities>
     {
         protected override void Seed(VolantEntities context)
         {
