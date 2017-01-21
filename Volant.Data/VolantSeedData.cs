@@ -13,8 +13,8 @@ namespace Volant.Data
         protected override void Seed(VolantEntities context)
         {
             GetCustomer().ForEach(c => context.Customers.Add(c));
-            GetProjectStatus().ForEach(g => context.ProjectStatuses.Add(g));
-            GetProject().ForEach(g => context.Projects.Add(g));
+            GetProjectStatus().ForEach(ps => context.ProjectStatuses.Add(ps));
+            GetProject().ForEach(p => context.Projects.Add(p));
 
             context.Commit();
         }

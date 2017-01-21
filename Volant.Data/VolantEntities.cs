@@ -26,7 +26,7 @@ namespace Volant.Data
         {
             modelBuilder.Configurations.Add(new ProjectConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
-            modelBuilder.Configurations.Add(new CustomerConfiguration());
+            modelBuilder.Configurations.Add(new ProjectStatusConfiguration());
 
         }
     }

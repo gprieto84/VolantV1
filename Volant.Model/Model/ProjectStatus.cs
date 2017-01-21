@@ -4,7 +4,7 @@ namespace Volant.Model
 {
     public class ProjectStatus
     {
-        public int statusId { get; set; }
+        public int projectStatusId { get; set; }
 
         public string name { get; set; }
 
