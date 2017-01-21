@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volant.Model", "Volant.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volant.Data", "Volant.Data\Volant.Data.csproj", "{5B5B7DCC-9484-4662-A529-453601ADA146}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volant.Service", "Volant.Service\Volant.Service.csproj", "{5D2C889F-6D63-4705-8ED2-A21014826547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5B5B7DCC-9484-4662-A529-453601ADA146}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5B7DCC-9484-4662-A529-453601ADA146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5B7DCC-9484-4662-A529-453601ADA146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2C889F-6D63-4705-8ED2-A21014826547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2C889F-6D63-4705-8ED2-A21014826547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2C889F-6D63-4705-8ED2-A21014826547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2C889F-6D63-4705-8ED2-A21014826547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
