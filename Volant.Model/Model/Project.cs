@@ -21,7 +21,12 @@ namespace Volant.Model
         public int customerId { get; set; }
         public Customer customer { get; set; }
 
-        public int statusId { get; set; }
+        public int projectStatusId { get; set; }
         public ProjectStatus projectStatus { get; set; }
+
+        public Project()
+        {
+            dateCreated = DateTime.Now;
+        }
     }
 }
