@@ -21,14 +21,14 @@ namespace Volant.Model
 
         //References
         public int jobTypeId { get; set; }
-        //public jobType jobType { get; set; }
+       public JobType jobType { get; set; }
 
 
         public int projectId { get; set; }
         public Project project { get; set; }
 
         public int jobStatusId { get; set; }
-        //public jobStatus jobStatus { get; set; }
+        public JobStatus jobStatus { get; set; }
 
         public Job()
         {
