@@ -29,6 +29,9 @@ namespace Volant.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Configurations.Add(new ProjectConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
             modelBuilder.Configurations.Add(new ProjectStatusConfiguration());
@@ -36,6 +39,7 @@ namespace Volant.Data
             modelBuilder.Configurations.Add(new JobStatusConfiguration());
             modelBuilder.Configurations.Add(new JobConfiguration());
             modelBuilder.Configurations.Add(new MaterialConfiguration());
+            modelBuilder.Configurations.Add(new JobMaterialConfiguration());
 
         }
     }

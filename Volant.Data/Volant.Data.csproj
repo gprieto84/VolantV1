@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\JobMaterialConfiguration.cs" />
     <Compile Include="Configuration\MaterialConfiguration.cs" />
     <Compile Include="Configuration\JobTypeConfiguration.cs" />
     <Compile Include="Configuration\JobStatusConfiguration.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\JobMaterialRepository.cs" />
     <Compile Include="Repositories\MaterialRepository.cs" />
     <Compile Include="Repositories\JobTypeRepository.cs" />
     <Compile Include="Repositories\JobStatusRepository.cs" />
