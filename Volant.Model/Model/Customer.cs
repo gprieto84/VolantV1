@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Volant.Model
 {
-    public class Customer
+    public partial class Customer
     {
         public int customerId { get; set; }
         public string name { get; set; }

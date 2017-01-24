@@ -24,7 +24,9 @@ namespace Volant.Web.Mappings
                 .ForMember(g => g.endDate, map => map.MapFrom(vm => vm.endDate))
                 .ForMember(g => g.progress, map => map.MapFrom(vm => vm.progress))
                 .ForMember(g => g.customerId, map => map.MapFrom(vm => vm.customerId))
-                .ForMember(g => g.projectStatusId, map => map.MapFrom(vm => vm.projectStatusId));
+                .ForMember(g => g.projectStatusId, map => map.MapFrom(vm => vm.projectStatusId))
+                .ForMember(g => g.customer, map => map.MapFrom(vm => vm.customer))
+                .ForMember(g => g.projectStatus, map => map.MapFrom(vm => vm.projectStatus));
         }
     }
 }

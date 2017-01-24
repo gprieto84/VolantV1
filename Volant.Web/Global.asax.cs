@@ -15,9 +15,7 @@ namespace Volant.Web
         protected void Application_Start()
         {
             // Init database
-            //System.Data.Entity.Database.SetInitializer(new VolantSeedData());
-            //System.Data.Entity.Database.SetInitializer(new VolantSeedData());
-            System.Data.Entity.Database.SetInitializer<VolantEntities> (null);
+            System.Data.Entity.Database.SetInitializer(new VolantSeedData());
 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);

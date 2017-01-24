@@ -240,3 +240,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Volant.Data/Migrations/Configuration.cs
+/Volant.Data/Migrations/201701221232516_InitialCreate.resx
+/Volant.Data/Migrations/201701221232516_InitialCreate.Designer.cs
+/Volant.Data/Migrations/201701221232516_InitialCreate.cs

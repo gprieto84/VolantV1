@@ -12,12 +12,12 @@ namespace Volant.Data
     {
         protected override void Seed(VolantEntities context)
         {
-            GetCustomer().ForEach(c => context.Customers.Add(c));
-            GetProjectStatus().ForEach(ps => context.ProjectStatuses.Add(ps));
-            GetProject().ForEach(p => context.Projects.Add(p));
+            //GetCustomer().ForEach(c => context.Customers.Add(c));
+            //GetProjectStatus().ForEach(ps => context.ProjectStatuses.Add(ps));
+           // GetProject().ForEach(p => context.Projects.Add(p));
 
 
-           context.Commit();
+           // context.Commit();
         }
 
         private static List<Customer> GetCustomer()

@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\JobMaterialConfiguration.cs" />
     <Compile Include="Configuration\MaterialConfiguration.cs" />
     <Compile Include="Configuration\JobTypeConfiguration.cs" />
     <Compile Include="Configuration\JobStatusConfiguration.cs" />
@@ -61,8 +60,12 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201701221232516_InitialCreate.cs" />
+    <Compile Include="Migrations\201701221232516_InitialCreate.Designer.cs">
+      <DependentUpon>201701221232516_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
-    <Compile Include="Repositories\JobMaterialRepository.cs" />
     <Compile Include="Repositories\MaterialRepository.cs" />
     <Compile Include="Repositories\JobTypeRepository.cs" />
     <Compile Include="Repositories\JobStatusRepository.cs" />
@@ -82,8 +85,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701221232516_InitialCreate.resx">
+      <DependentUpon>201701221232516_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

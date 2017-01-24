@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\JobMaterial.cs" />
     <Compile Include="Model\JobType.cs" />
     <Compile Include="Model\JobStatus.cs" />
     <Compile Include="Model\Job.cs" />

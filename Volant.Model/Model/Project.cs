@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Volant.Model
 {
-    public class Project
+    public partial class Project
     {
+
+        public Project()
+        {
+            this.dateCreated = DateTime.Now;
+        }
+
         public int projectId { get; set; }
         public string name { get; set; }
         public string description { get; set; }
@@ -27,9 +33,6 @@ namespace Volant.Model
         //Denormalization
         public virtual List<Job> Jobs { get; set; }
 
-        public Project()
-        {
-            dateCreated = DateTime.Now;
-        }
+   
     }
 }
