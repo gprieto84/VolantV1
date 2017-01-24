@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 
 namespace Volant.Service
 {
+    public enum CustomerStatusId
+    {
+        enabled  = 1,
+        disabled = 2
+    }
+
     public interface ICustomerService
     {
         IEnumerable<Customer> GetCustomers(string name = null);
@@ -43,6 +49,11 @@ namespace Volant.Service
         {
             var customer = customerRepository.GetById(id);
             return customer;
+        }
+
+        public IEnumerable<Customer> GetAllCustomerByStatus (CustomerStatusId customerId)
+        {
+            return customerRepository.GetAllCustomerByStatus((int)customerId);
         }
 
         public Customer GetCustomer(string name)

@@ -25,10 +25,16 @@ namespace Volant.Data.Repositories
             entity.dateUpdated = DateTime.Now;
             base.Update(entity);
         }
+
+        public IEnumerable<Customer> GetAllCustomerByStatus(int customerStatusId)
+        {
+            return this.DbContext.Customers.Where(c => c.customerStatusId == customerStatusId).ToList();
+        }
     }
 
     public interface ICustomerRepository : IRepository<Customer>
     {
         Customer GetCustomerByName(string customerName);
+        IEnumerable<Customer> GetAllCustomerByStatus(int customerStatusId);
     }
 }

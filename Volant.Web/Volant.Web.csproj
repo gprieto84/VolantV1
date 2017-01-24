@@ -264,6 +264,7 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Job\Edit.cshtml" />
     <Content Include="Views\Job\Detail.cshtml" />
+    <Content Include="Views\Project\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

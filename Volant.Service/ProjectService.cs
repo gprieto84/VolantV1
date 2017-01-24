@@ -17,6 +17,7 @@ namespace Volant.Service
         Project GetProject(int id);
         void CreateProject(Project project);
         void SaveProject();
+        IEnumerable<Customer> GetAllCustomerByStatus(CustomerStatusId customerId);
     }
 
     public class ProjectService : IProjectService
@@ -60,6 +61,11 @@ namespace Volant.Service
         public void SaveProject()
         {
             unitOfWork.Commit();
+        }
+
+        public IEnumerable<Customer> GetAllCustomerByStatus(CustomerStatusId customerId)
+        {
+            return customerRepository.GetAllCustomerByStatus((int) customerId);
         }
 
         #endregion

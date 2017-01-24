@@ -9,7 +9,7 @@ namespace Volant.Model
         public string name { get; set; }
         public DateTime? dateCreated { get; set; }
         public DateTime? dateUpdated { get; set; }
-
+        public int customerStatusId { get; set; }
         public virtual List<Project> projects { get; set; }
     }
 }

@@ -30,5 +30,30 @@ namespace Volant.Web.Controllers
             viewModelProjects = Mapper.Map<IEnumerable<Project>, IEnumerable<ProjectViewModel>>(projects);
             return View(viewModelProjects);
         }
+
+        public ActionResult Create ()
+        {
+            //Define the initial values for Project Fields.
+            //Object to fill the initial values.
+            var project = new ProjectFormViewModel();
+            //Get all activated customers in the database.
+            project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled);
+            //Return object to fill in the form.
+            return View(project);
+        }
+
+        [HttpPost]
+        public ActionResult Create(ProjectFormViewModel project)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                //project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled);
+                return this.View(project);
+            }
+        }
     }
 }
