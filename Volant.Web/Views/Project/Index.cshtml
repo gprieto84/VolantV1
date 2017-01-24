@@ -25,7 +25,7 @@
 
             <div class="ibox">
                 <div class="ibox-title">
-                    <h5></h5>
+                    <h5>Heading</h5>
                     <div class="ibox-tools">
                         <a href="@Url.Action("Create", "Projects")" class="btn btn-primary btn-xs">Create new project</a>
                     </div>
@@ -52,7 +52,7 @@
                                 {
                                     <tr>
                                         <td class="project-status">
-                                            <span class="label label-primary">@Html.DisplayFor(modelItem => item.projectStatus.name)</span>
+                                            <span class="label label-primary">@Html.DisplayFor(modelItem => item.projectStatusName)</span>
 
                                         </td>
                                         <td class="project-title">
@@ -71,13 +71,13 @@
                                         </td>
 
                                         <td class="project-completion">
-                                            @Html.DisplayFor(modelItem => item.customer.name)
+                                            @Html.DisplayFor(modelItem => item.customerName)
                                         </td>
 
                                         <td class="project-actions">
-                                            <a href="@Url.Action("Details", "Projects", new { id = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
-                                            <a href="@Url.Action("Edit", "Projects", new { id = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
-                                            <a href="@Url.Action("Index", "Orders", new { projectId = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Orders </a>
+                                            <a href="@Url.Action("Details", "Project", new { id = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                            <a href="@Url.Action("Edit", "Project", new { id = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a href="@Url.Action("Index", "Job", new { projectId = item.projectId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Orders </a>
                                         </td>
                                     </tr>
                                 }

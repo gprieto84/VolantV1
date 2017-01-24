@@ -52,11 +52,11 @@
                                 {
                                     <tr>
                                         <td class="project-status">
-                                            <span class="label label-primary">@Html.DisplayFor(modelItem => item.jobStatusId)</span>
+                                            <span class="label label-primary">@Html.DisplayFor(modelItem => item.jobStatusName)</span>
 
                                         </td>
                                         <td class="project-title">
-                                            <a href="@Url.Action("Detail", "Job")">@Html.DisplayFor(modelItem => item.jobId)
+                                            <a href="@Url.Action("Detail", "Job")">@Html.DisplayFor(modelItem => item.jobIdentifier)
                                              @Html.DisplayFor(modelItem => item.jobName)</a>
                                             <br />
                                             <small>Deadline @Html.DisplayFor(modelItem => item.endDate)</small>

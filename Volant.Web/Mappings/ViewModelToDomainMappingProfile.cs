@@ -26,6 +26,15 @@ namespace Volant.Web.Mappings
                     .ForMember(g => g.customerId, map => map.MapFrom(vm => vm.customerId))
                     .ForMember(g => g.customerName, map => map.MapFrom(vm => vm.customer.name))
                     .ForMember(g => g.projectStatusName, map => map.MapFrom(vm => vm.projectStatus.name));
+
+            CreateMap<Job, JobViewModel>()
+                 .ForMember(g => g.jobName, map => map.MapFrom(vm => vm.jobName))        
+                 .ForMember(g => g.startDate, map => map.MapFrom(vm => vm.startDate))
+                 .ForMember(g => g.endDate, map => map.MapFrom(vm => vm.endDate))
+                 .ForMember(g => g.jobIdentifier, map => map.MapFrom(vm => vm.jobIdentifier))
+                 .ForMember(g => g.jobStatusName, map => map.MapFrom(vm => vm.jobStatus.name))
+                 .ForMember(g => g.jobTypeName, map => map.MapFrom(vm => vm.jobType.name))
+                 .ForMember(g => g.priority, map => map.MapFrom(vm => vm.priority));
         }
     }
 }

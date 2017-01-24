@@ -13,7 +13,7 @@ namespace Volant.Service
     public interface IJobService
     {
         IEnumerable<Job> GetJobs();
-        IEnumerable<Job> GetProjectJobs(int projectId);
+        IEnumerable<Job> GetJobsByProject(int? projectId);
         Job GetJob(int id);
         void CreateJob(Job project);
         void SaveJob();
@@ -40,10 +40,10 @@ namespace Volant.Service
             return job;
         }
 
-        public IEnumerable<Job> GetProjectJobs(int projectId)
+        public IEnumerable<Job> GetJobsByProject(int? projectId)
         {
-            var project = projectRepository.GetById(projectId);
-            return project.Jobs;
+            var jobs = jobRepository.GetMany(b => b.projectId == projectId);
+            return jobs;
         }
 
         public Job GetJob(int id)
