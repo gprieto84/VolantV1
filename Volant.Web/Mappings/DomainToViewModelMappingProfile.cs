@@ -17,7 +17,8 @@ namespace Volant.Web.Mappings
 
         protected override void Configure()
         {
-            CreateMap<Project, ProjectViewModel>();            
+            CreateMap<Project, ProjectViewModel>();
+            CreateMap<Job, JobViewModel>();
         }
     }
 }

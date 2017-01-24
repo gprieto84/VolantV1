@@ -262,6 +262,8 @@
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Job\Index.cshtml" />
+    <Content Include="Views\Job\Edit.cshtml" />
+    <Content Include="Views\Job\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

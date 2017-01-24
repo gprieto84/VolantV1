@@ -42,7 +42,7 @@ namespace Volant.Service
 
         public IEnumerable<Job> GetJobsByProject(int? projectId)
         {
-            var jobs = jobRepository.GetMany(b => b.projectId == projectId);
+            var jobs = jobRepository.GetJobsByProject(projectId);
             return jobs;
         }
 

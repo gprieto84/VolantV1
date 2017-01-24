@@ -12,7 +12,7 @@
                 <a href="@Url.Action("_Navigation", "Shared")">Home</a>
             </li>
             <li class="active">
-                <strong>Project list</strong>
+                <strong>Job list</strong>
             </li>
         </ol>
     </div>
@@ -70,9 +70,9 @@
                                         </td>
 
                                         <td class="project-actions">
-                                            <a href="@Url.Action("Details", "Job", new { id = item.jobId  })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                            <a href="@Url.Action("Detail", "Job", new { id = item.jobId  })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
                                             <a href="@Url.Action("Edit", "Job", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
-                                            <a href="@Url.Action("Materials", "Job", new { projectId = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Materials </a>
+                                            <a href="@Url.Action("Materials", "Job", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Materials </a>
                                         </td>
                                     </tr>
                                 }

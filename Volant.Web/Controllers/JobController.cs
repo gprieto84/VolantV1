@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Volant.Model;
@@ -34,6 +35,22 @@ namespace Volant.Web.Controllers
 
             viewModelJobs = Mapper.Map<IEnumerable<Job>, IEnumerable<JobViewModel>>(jobs);
             return View(viewModelJobs);
+        }
+
+        public ActionResult Detail(int id)
+        {
+            JobViewModel viewModelJob;
+            Job job;
+            /*if (jobId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }*/
+
+            //int id = jobId.Value;
+            job = jobService.GetJob(id);
+            viewModelJob = Mapper.Map<Job, JobViewModel>(job);
+
+            return View(viewModelJob);
         }
     }
 }
