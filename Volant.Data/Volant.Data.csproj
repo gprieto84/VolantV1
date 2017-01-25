@@ -67,6 +67,7 @@
     <Compile Include="Repositories\JobTypeRepository.cs" />
     <Compile Include="Repositories\JobStatusRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
+    <Compile Include="Repositories\ProjectStatusRepository.cs" />
     <Compile Include="Repositories\ProjectRepository.cs" />
     <Compile Include="VolantEntities.cs" />
     <Compile Include="Configuration\CustomerConfiguration.cs" />

@@ -18,18 +18,21 @@ namespace Volant.Service
         void CreateProject(Project project);
         void SaveProject();
         IEnumerable<Customer> GetAllCustomerByStatus(CustomerStatusId customerId);
+        IEnumerable<ProjectStatus> GetProjectStatuses();
     }
 
     public class ProjectService : IProjectService
     {
         private readonly IProjectRepository projectRepository;
         private readonly ICustomerRepository customerRepository;
+        private readonly IProjectStatusRepository projectStatusRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public ProjectService(IProjectRepository projectRepository, ICustomerRepository customerRepository, IUnitOfWork unitOfWork)
+        public ProjectService(IProjectRepository projectRepository, ICustomerRepository customerRepository, IProjectStatusRepository projectStatusRepository, IUnitOfWork unitOfWork)
         {
             this.projectRepository = projectRepository;
             this.customerRepository = customerRepository;
+            this.projectStatusRepository = projectStatusRepository;
             this.unitOfWork = unitOfWork;
         }
 
@@ -53,6 +56,7 @@ namespace Volant.Service
             return project;
         }
 
+
         public void CreateProject(Project project)
         {
             projectRepository.Add(project);
@@ -66,6 +70,11 @@ namespace Volant.Service
         public IEnumerable<Customer> GetAllCustomerByStatus(CustomerStatusId customerId)
         {
             return customerRepository.GetAllCustomerByStatus((int) customerId);
+        }
+
+        public IEnumerable<ProjectStatus> GetProjectStatuses()
+        {
+            return projectStatusRepository.GetAll();
         }
 
         #endregion
