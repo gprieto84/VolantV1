@@ -1,7 +1,7 @@
 ﻿@model Volant.Web.ViewModel.ProjectFormViewModel
 
 @{
-    ViewBag.Title = "Create Project";
+    ViewBag.Title = "Edit Project";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -10,19 +10,19 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Create Project</title>
+    <title>Edit Project</title>
 </head>
 <body>
-    @using (Html.BeginForm()) 
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         
         <div class="form-horizontal">
-            <h4>Create Project</h4>
+            <h4>ProjectFormViewModel</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                @Html.LabelFor(model => model.name,"Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
@@ -30,7 +30,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
@@ -38,7 +38,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.startDate, "Start Date",  htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.startDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.startDate, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.startDate, "", new { @class = "text-danger" })
@@ -46,7 +46,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.endDate, "End Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.endDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.endDate, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.endDate, "", new { @class = "text-danger" })
@@ -54,32 +54,32 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.progress, "Progress",  htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.progress, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.progress,  new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.progress, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.progress, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.customerId, "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.customerId, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.customerId, new SelectList(Model.customers, "customerId", "name"), "- Please Select -")
+                    @Html.EditorFor(model => model.customerId, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.customerId, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.projectStatusId, "Status", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.projectStatusId, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.projectStatusId, new SelectList(Model.projectStatuses, "projectStatusId", "name"), "- Please Select -")
+                    @Html.EditorFor(model => model.projectStatusId, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.projectStatusId, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Save" class="btn btn-default" />
                 </div>
             </div>
         </div>
