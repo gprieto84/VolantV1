@@ -13,7 +13,7 @@ namespace Volant.Web.Controllers
     public class ProjectController : Controller
     {
         private readonly IProjectService projectService;
-
+  
         public ProjectController(IProjectService projectService)
         {
             this.projectService = projectService;
@@ -30,7 +30,7 @@ namespace Volant.Web.Controllers
             viewModelProjects = Mapper.Map<IEnumerable<Project>, IEnumerable<ProjectViewModel>>(projects);
             return View(viewModelProjects);
         }
-
+        // Get: Action = Create.
         public ActionResult Create ()
         {
             //Define the initial values for Project Fields.
@@ -38,21 +38,60 @@ namespace Volant.Web.Controllers
             var project = new ProjectFormViewModel();
             //Get all activated customers in the database.
             project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled);
+            //Set the initial value for Start and End Date Project.
+            project.startDate = DateTime.Now;
+            project.endDate   = DateTime.Now;
+            //List all project status.
+            project.projectStatuses = projectService.GetProjectStatuses();
             //Return object to fill in the form.
             return View(project);
         }
 
+        public ActionResult Edit()
+        {
+            //Define the initial values for Project Fields.
+            //Object to fill the initial values.
+            var project = new ProjectFormViewModel();
+            //Get all activated customers in the database.
+            project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled);
+            //Set the initial value for Start and End Date Project.
+            project.startDate = DateTime.Now;
+            project.endDate = DateTime.Now;
+            //List all project status.
+            project.projectStatuses = projectService.GetProjectStatuses();
+            //Return object to fill in the form.
+            return View(project);
+        }
+
+
         [HttpPost]
+        //Handle post event to create project.
         public ActionResult Create(ProjectFormViewModel project)
         {
+            #region "Vars"
+            Project objProject;
+            #endregion.
+
             if (ModelState.IsValid)
             {
+                #region "Create Project"
+                //Convert ViewModel to Business Object.
+                objProject = Mapper.Map<ProjectFormViewModel, Project>(project);
+                //Create Project.
+                projectService.CreateProject(objProject);
+                //Confirm the creation process.
+                projectService.SaveProject();
                 return RedirectToAction("Index");
+                #endregion
             }
             else
             {
-                //project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled);
+                #region "Send to Create Page"
+                //Set values list from dropdownlist for Customers & ProjectStatuses.
+                project.customers = projectService.GetAllCustomerByStatus(CustomerStatusId.enabled); // Get All Customer Enabled.
+                project.projectStatuses = projectService.GetProjectStatuses(); // Get All the project statuses configured.
                 return this.View(project);
+                #endregion
             }
         }
     }

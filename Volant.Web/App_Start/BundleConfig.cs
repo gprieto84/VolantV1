@@ -48,6 +48,7 @@ namespace Volant.Web.App_Start
             bundles.Add(new StyleBundle("~/font-awesome/css").Include(
                       "~/fonts/font-awesome/css/font-awesome.min.css", new CssRewriteUrlTransform()));
 
+
             //BundleTable.EnableOptimizations = true;
         }
     }
