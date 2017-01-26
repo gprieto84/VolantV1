@@ -19,6 +19,7 @@ namespace Volant.Web.ViewModel
 
         public string jobTypeName { get; set; }
         public int projectId { get; set; }
+        public string projectName { get; set; }
         public string jobStatusName { get; set; }
 
     }

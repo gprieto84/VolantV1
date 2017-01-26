@@ -13,6 +13,8 @@ namespace Volant.Model
         public int materialId { get; set; }
         public decimal quantity { get; set; }
         public int estado { get; set; }
-        public virtual List<JobMaterial> JobMaterials { get; set; }
+        public virtual Job job { get; set; }
+
+        public virtual Material material { get; set; }
     }
 }

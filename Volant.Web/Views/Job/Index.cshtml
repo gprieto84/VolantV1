@@ -6,13 +6,13 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-4">
-        <h2>Project list</h2>
+        <h2>Job list</h2>
         <ol class="breadcrumb">
             <li>
                 <a href="@Url.Action("_Navigation", "Shared")">Home</a>
             </li>
             <li class="active">
-                <strong>Job list</strong>
+                <strong>Job list </strong>
             </li>
         </ol>
     </div>
@@ -62,17 +62,20 @@
                                             <small>Deadline @Html.DisplayFor(modelItem => item.endDate)</small>
                                         </td>
                                         <td class="project-completion">
+                                            @Html.DisplayFor(modelItem => item.jobTypeName)
+                                        </td>
+                                        <td class="project-completion">
                                            Priority: @Html.DisplayFor(modelItem => item.priority)
                                         </td>
 
                                         <td class="project-completion">
-                                            Project: @Html.DisplayFor(modelItem => item.projectId)
+                                            Project: @Html.DisplayFor(modelItem => item.projectName)
                                         </td>
 
                                         <td class="project-actions">
                                             <a href="@Url.Action("Detail", "Job", new { id = item.jobId  })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
                                             <a href="@Url.Action("Edit", "Job", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
-                                            <a href="@Url.Action("Materials", "Job", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Materials </a>
+                                            <a href="@Url.Action("IndexByJob", "JobMaterial", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Materials </a>
                                         </td>
                                     </tr>
                                 }

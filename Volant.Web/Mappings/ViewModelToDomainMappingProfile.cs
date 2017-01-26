@@ -34,6 +34,7 @@ namespace Volant.Web.Mappings
                  .ForMember(g => g.jobIdentifier, map => map.MapFrom(vm => vm.jobIdentifier))
                  .ForMember(g => g.jobStatusName, map => map.MapFrom(vm => vm.jobStatus.name))
                  .ForMember(g => g.jobTypeName, map => map.MapFrom(vm => vm.jobType.name))
+                 .ForMember(g => g.projectName, map => map.MapFrom(vm => vm.project.name))
                  .ForMember(g => g.priority, map => map.MapFrom(vm => vm.priority));
         }
     }
