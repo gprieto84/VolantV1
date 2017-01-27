@@ -44,35 +44,35 @@
                         </div>
                     </div>
 
-                    <div class="project-list">
+                    <div class="table-responsive">
 
-                        <table class="table table-hover">
+                        <table class="table table-hover issue-tracker">
                             <tbody>
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td class="project-status">
+                                        <td>
                                             <span class="label label-primary">@Html.DisplayFor(modelItem => item.jobStatusName)</span>
 
                                         </td>
-                                        <td class="project-title">
+                                        <td class="issue-info">
                                             <a href="@Url.Action("Detail", "Job")">@Html.DisplayFor(modelItem => item.jobIdentifier)
                                              @Html.DisplayFor(modelItem => item.jobName)</a>
                                             <br />
                                             <small>Deadline @Html.DisplayFor(modelItem => item.endDate)</small>
                                         </td>
-                                        <td class="project-completion">
+                                        <td >
                                             @Html.DisplayFor(modelItem => item.jobTypeName)
                                         </td>
-                                        <td class="project-completion">
+                                        <td >
                                            Priority: @Html.DisplayFor(modelItem => item.priority)
                                         </td>
 
-                                        <td class="project-completion">
+                                        <td >
                                             Project: @Html.DisplayFor(modelItem => item.projectName)
                                         </td>
 
-                                        <td class="project-actions">
+                                        <td >
                                             <a href="@Url.Action("Detail", "Job", new { id = item.jobId  })" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
                                             <a href="@Url.Action("Edit", "Job", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
                                             <a href="@Url.Action("IndexByJob", "JobMaterial", new { id = item.jobId })" class="btn btn-white btn-sm"><i class="fa fa-tasks"></i> Materials </a>

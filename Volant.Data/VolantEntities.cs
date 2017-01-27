@@ -20,6 +20,7 @@ namespace Volant.Data
         public DbSet<Job> Jobs { get; set; }
         public DbSet<JobType> JobTypes { get; set; }
         public DbSet<JobStatus> JobStatuses { get; set; }
+        public DbSet<JobMaterial> JobMaterials { get; set; }
         public DbSet<Material> MaterialStatuses { get; set; }
 
         public virtual void Commit()

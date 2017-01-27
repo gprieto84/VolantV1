@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Volant.Model
+namespace Volant.Web.ViewModel
 {
-    public class JobMaterial
+    public class JobMaterialViewModel
     {
         public int jobMaterialId { get; set; }
         public int jobId { get; set; }
         public int materialId { get; set; }
         public decimal quantity { get; set; }
-        public int? estado { get; set; }
-        public virtual Job job { get; set; }
+        public string materialName { get; set; }
+        public string jobName { get; set; }
 
-        public virtual Material material { get; set; }
     }
 }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerService.cs" />
+    <Compile Include="JobMaterialService.cs" />
     <Compile Include="JobService.cs" />
     <Compile Include="ProjectStatusService.cs" />
     <Compile Include="ProjectService.cs" />
