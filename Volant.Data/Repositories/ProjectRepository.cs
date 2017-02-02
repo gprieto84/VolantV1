@@ -19,6 +19,7 @@ namespace Volant.Data.Repositories
             return DbContext.Projects
                      .Include(c => c.customer)
                      .Include(c => c.projectStatus)
+                     .Include(c => c.Jobs)
                      .ToList();
         }
     }

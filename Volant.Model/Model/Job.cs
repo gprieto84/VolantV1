@@ -30,6 +30,8 @@ namespace Volant.Model
         public int jobStatusId { get; set; }
         public JobStatus jobStatus { get; set; }
 
+        public List<JobMaterial> JobMaterials { get; set; }
+
         public Job()
         {
             dateCreated = DateTime.Now;

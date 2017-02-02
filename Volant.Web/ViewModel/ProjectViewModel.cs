@@ -21,5 +21,12 @@ namespace Volant.Web.ViewModel
         public int customerId { get; set; }
         public string customerName { get; set; }
         public string projectStatusName { get; set; }
+
+        public int countOfJobs { get; set; }
+
+        public decimal countOfMaterials { get; set; }
+
+        public decimal countOfMaterialsInStock { get; set; }
+
     }
 }

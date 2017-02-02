@@ -25,6 +25,7 @@ namespace Volant.Web.Mappings
                     .ForMember(g => g.progress, map => map.MapFrom(vm => vm.progress))
                     .ForMember(g => g.customerId, map => map.MapFrom(vm => vm.customerId))
                     .ForMember(g => g.customerName, map => map.MapFrom(vm => vm.customer.name))
+                    .ForMember(g => g.countOfJobs, map => map.MapFrom(vm => vm.Jobs.Count))
                     .ForMember(g => g.projectStatusName, map => map.MapFrom(vm => vm.projectStatus.name));
 
             CreateMap<Job, JobViewModel>()

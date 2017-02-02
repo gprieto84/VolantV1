@@ -48,6 +48,7 @@
     <Compile Include="Model\Material.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\ProjectStatus.cs" />
+    <Compile Include="Model\Simulation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

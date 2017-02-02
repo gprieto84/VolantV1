@@ -63,6 +63,7 @@
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\JobMaterialRepository.cs" />
+    <Compile Include="Repositories\SimulationRepository.cs" />
     <Compile Include="Repositories\MaterialRepository.cs" />
     <Compile Include="Repositories\JobTypeRepository.cs" />
     <Compile Include="Repositories\JobStatusRepository.cs" />
