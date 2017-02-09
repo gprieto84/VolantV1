@@ -21,6 +21,7 @@ namespace Volant.Web.Mappings
             CreateMap<Project, ProjectFormViewModel>();
             CreateMap<ProjectFormViewModel, Project>();
             CreateMap<Job, JobViewModel>();
+            CreateMap<Simulation, SimulationViewModel>();
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 using Volant.Data.Infrastructure;
 using Volant.Model;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Volant.Data.Repositories
 {
@@ -16,15 +18,15 @@ namespace Volant.Data.Repositories
 
 
 
-        public IEnumerable<Simulation> Simulate(int? projectId)
+        public IEnumerable<Simulation> StockSimulation(int? projectId)
         {
-            return ; 
+            return DbContext.Database.SqlQuery<Simulation>(@"[dbo].[StockSimulation] @projectId", new SqlParameter("projectId", SqlDbType.Int) { Value = projectId }); 
         }
 
     }
 
     public interface ISimulationRepository : IRepository<Simulation>
     {
-        IEnumerable<Simulation> Simulate(int? projectId);
+        IEnumerable<Simulation> StockSimulation(int? projectId);
     }
 }

@@ -55,6 +55,14 @@ namespace Volant.Web.Mappings
                .ForMember(g => g.materialName, map => map.MapFrom(vm => vm.material.description))
                .ForMember(g => g.quantity, map => map.MapFrom(vm => vm.quantity));
 
+            CreateMap<Simulation, SimulationViewModel>()
+             .ForMember(g => g.jobId, map => map.MapFrom(vm => vm.jobId))
+             .ForMember(g => g.jobIdAffected, map => map.MapFrom(vm => vm.jobIdAffected))
+             .ForMember(g => g.materialId, map => map.MapFrom(vm => vm.materialId))
+             .ForMember(g => g.quantity, map => map.MapFrom(vm => vm.quantity))
+             .ForMember(g => g.priority, map => map.MapFrom(vm => vm.priority))
+             .ForMember(g => g.status, map => map.MapFrom(vm => vm.status));
+
 
         }
     }
